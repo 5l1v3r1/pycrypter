@@ -5,7 +5,7 @@ import colorama
 from colorama import Fore
 
 OFFSET = 10
-VARIABLE_NAME = '__ELOLOL_HA' * 100
+VARIABLE_NAME = '__PYCRYPTER_HA' * 100
 
 def obfuscate(content):
     b64_content = base64.b64encode(content.encode()).decode()

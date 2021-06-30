@@ -1,5 +1,5 @@
 # PyCrypter
-PyCrypter is a simple encrypter made in Python, Obviously.
+>PyCrypter is a simple encrypter made in Python, Obviously.
 
 # PyCrypter Usage
 >Install Python 3.9.5
@@ -8,3 +8,7 @@ PyCrypter is a simple encrypter made in Python, Obviously.
 >To PyCrypt one of your files, Run this command in your Terminal:
 
     python PyCrypter.py <file>.py   
+
+
+# Licensing 
+Free to use, wodx rework🥵

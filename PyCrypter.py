@@ -8,19 +8,25 @@ crypter_offset = 10
 crypter_mark = '__PYCRYPTER_HA' * 100
 
 def pycrypt(content):
+	
     b64_content = base64.b64encode(content.encode()).decode()
     index = 0
     code = f'{crypter_mark} = ""\n'
 
     for _ in range(int(len(b64_content) / crypter_offset) + 1):
         _str = ''
+	
         for char in b64_content[index:index + crypter_offset]:
             byte = str(hex(ord(char)))[2:]
+	
             if len(byte) < 2:
                 byte = '0' + byte
+		
             _str += '\\x' + str(byte)
+	
         code += f'{crypter_mark} += "{_str}"\n'
         index += crypter_offset
+	
     code += f'exec(__import__("\\x62\\x61\\x73\\x65\\x36\\x34").b64decode({crypter_mark}.encode("\\x75\\x74\\x66\\x2d\\x38")).decode("\\x75\\x74\\x66\\x2d\\x38"))'
 
     return code

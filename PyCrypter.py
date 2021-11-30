@@ -59,9 +59,11 @@ def pycrypt_startup():
         with open(f'{path.split(".")[0]}_pycrypted.py', 'w') as file:
             file.write(pycrypt_content)
         print(f'[{Fore.GREEN}+{Fore.RESET}] File Has been PyCrypted {Fore.GREEN}SUCCESSFULLY!{Fore.RESET}')
-	time.sleep(2)
+	exit()
     except:
         print(f'[{Fore.RED}x{Fore.RESET}] PyCrypter Correct Usage: {Fore.YELLOW}{argv[0]} <file>{Fore.RESET}')
+	time.sleep(2)
+	exit()
 
 if __name__ == '__main__':
     pycrypt_startup()
